@@ -6,13 +6,15 @@ import { AppComponent } from './app.component';
 import { NavBarComponent } from './nav-bar/nav-bar.component';
 import { QuotesComponent } from './quotes/quotes.component';
 import { StrikethroughDirective } from './strikethrough.directive';
+import { QuotesFormComponent } from './quotes-form/quotes-form.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     NavBarComponent,
     QuotesComponent,
-    StrikethroughDirective
+    StrikethroughDirective,
+    QuotesFormComponent
   ],
   imports: [
     BrowserModule,
