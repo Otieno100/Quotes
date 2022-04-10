@@ -1,4 +1,19 @@
-<p>quotes works!</p>
-<ul>
-    <li *ngFor="let quote of quotes">{{quote.quotes}} <span>{{quote.upVotes}}</span>{{quote.downVotes}} <span></span></li>
-</ul>
+<div class="container select">
+    
+    <div class="row">
+
+        <div class="col-md -4">
+            <div *ngFor="let quote of quotes;let i =index">
+                <h1>{{quote.quoteTitle}}</h1>
+                <app-quote-detail [quotes]="quote" *ngIf="quote.showDescription"></app-quote-detail>
+                <button (click)="toggle(i)">Toggle</button>
+                <button (click)="deleteQuotes(i)" class="btn-sucess">Delete</button>
+            </div>
+        </div>
+        <div class="col-md -8 test">
+            <app-quotes-form  (userData)="submitData($event)"></app-quotes-form>
+        </div>
+
+    </div>
+
+</div>

@@ -11,16 +11,27 @@ export class QuotesComponent implements OnInit {
 
 
   quotes: Quotes[] = [
-    new Quotes(1, 'first Quote', 0,0),
-    new Quotes(2, 'second Quote',0,0),
-    new Quotes(3, 'Third Quote',0,0),
-    new Quotes(4, 'Fourth Quote',0,0),
-    new Quotes(5, 'Fifth Quote',0,0),
-    new Quotes(6,'last Quote',0,0),
+    new Quotes( 'blue Wayne', "black African", "loveQuotes", "whoever loves gets blinded", "j masson benter", new Date(2022, 7, 1)),
+    new Quotes( 'blue wayne', "black African", "loveQuote", "whoever loves gets blindid", "mason", new Date(2022, 7, 1)),
+    new Quotes( 'blue quote', "black African", "loveQuotes", "whoever loves gets blinded", "j masson benter", new Date(2022, 7, 1)),
+    
   ];
 
 
   constructor() { }
+
+  submitData(myN:Quotes) {
+    this.quotes.push(myN)
+   }
+   toggle(index:number){
+     this.quotes[index].showDescription= !this.quotes[index].showDescription
+   }
+
+   deleteQuotes(index:number){
+     this.quotes.splice(index,1)
+   }
+
+
 
   ngOnInit(): void {
   }

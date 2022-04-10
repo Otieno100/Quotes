@@ -1,17 +1,21 @@
-import { DatePipe } from '@angular/common';
-import { compileClassMetadata } from '@angular/compiler';
-import { Component, OnInit } from '@angular/core';
-import { NgForm } from '@angular/forms';
+import { Component, OnInit, Output, EventEmitter } from '@angular/core';
 import { Quotes } from '../quotes';
+
 @Component({
   selector: 'app-quotes-form',
   templateUrl: './quotes-form.component.html',
   styleUrls: ['./quotes-form.component.css']
 })
 export class QuotesFormComponent implements OnInit {
-  form=NgForm
-  newQuote = new Quotes(0,"",0,0,Date);
+
+  @Output() userData = new EventEmitter<Quotes>();
+
+  newQuote = new Quotes( "", "", "", "", "", new Date);
   constructor() { }
+
+  submitForm() { 
+    this.userData.emit(this.newQuote);
+  }
 
   ngOnInit(): void {
   }

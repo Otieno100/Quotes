@@ -1,18 +1,18 @@
 import { identifierName, Quote } from "@angular/compiler";
 
 export class Quotes {
-    // id!: number;
-    // quotes!: string;
-    // upVotes!:number;
-    // downVotes!:number;
+   
 
 
-
-
+    public upVotes: number;
+    public downVotes: number;
     public showDescription: boolean;
-    constructor( public id: number,public quotes:string, public upVotes:number, public downVotes:number, public completeDate:Date,){
-  
+    
+    constructor( public quoteAuthor: string, public userName: string, public quoteTitle: string, public quoteDescription: string, public name: string, public completeDate: Date,) {
 
-    this.showDescription=false;
+        this.upVotes = 0;
+        this.downVotes = 0;
+
+        this.showDescription= true;
     }
 }

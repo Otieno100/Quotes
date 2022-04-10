@@ -1,0 +1,16 @@
+.select{
+    border: solid red;
+    border-radius: 20px;
+
+}
+
+.test{
+border: solid red;
+margin-top: 20px;
+margin-right: 20px;
+border-radius: 20px;
+margin-bottom: 10px;
+background-color: midnightblue;
+color: aliceblue;
+
+}
