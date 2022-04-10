@@ -5,12 +5,32 @@
 }
 
 .test{
-border: solid red;
+/* border: solid red; */
 margin-top: 20px;
 margin-right: 20px;
 border-radius: 20px;
 margin-bottom: 10px;
-background-color: midnightblue;
+background-color: #1e4558;
 color: aliceblue;
 
+}
+
+button{
+    background-color: #1e4558;
+    margin-right: 20px;
+padding: 5px;
+padding-right: 20px;
+padding-left: 20px;
+border-radius: 10px;
+color: #f8eee3;
+
+}
+
+.btn-sucess{
+    background-color: red;
+}
+
+.select{
+    background: #f8eee3;
+    /* color: aliceblue; */
 }

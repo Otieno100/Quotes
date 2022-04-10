@@ -11,9 +11,9 @@ export class QuotesComponent implements OnInit {
 
 
   quotes: Quotes[] = [
-    new Quotes( 'blue Wayne', "black African", "loveQuotes", "whoever loves gets blinded", "j masson benter", new Date(2022, 7, 1)),
-    new Quotes( 'blue wayne', "black African", "loveQuote", "whoever loves gets blindid", "mason", new Date(2022, 7, 1)),
-    new Quotes( 'blue quote', "black African", "loveQuotes", "whoever loves gets blinded", "j masson benter", new Date(2022, 7, 1)),
+    new Quotes( 'blue Wayne', "black African", "loveQuotes", "whoever loves gets blinded", "j masson benter", new Date(2022, 3, 10,),0,0),
+    new Quotes( 'blue wayne', "black African", "loveQuote", "whoever loves gets blindid", "mason", new Date(2022, 3, 10),0,0),
+    new Quotes( 'blue quote', "black African", "loveQuotes", "whoever loves gets blinded", "j masson benter", new Date(2022, 3, 10),0,0)
     
   ];
 
@@ -29,6 +29,15 @@ export class QuotesComponent implements OnInit {
 
    deleteQuotes(index:number){
      this.quotes.splice(index,1)
+   }
+   upVotesQuotes(index:number){
+    var app = this.quotes [index].upVotes+1;
+this.quotes [index].upVotes=app
+   }
+
+   downVotesQuotes(index:number){
+    var app = this.quotes [index].downVotes+1;
+    this.quotes [index].downVotes=app
    }
 
 
