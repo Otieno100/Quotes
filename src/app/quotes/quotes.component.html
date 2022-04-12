@@ -1,11 +1,19 @@
 <div class="container select">
-    
+
     <div class="row">
 
         <div class="col-md -4">
             <div *ngFor="let quote of quotes;let i =index">
-                <h1>{{quote.quoteTitle}}</h1>
-                <app-quote-detail [quotes]="quote" *ngIf="quote.showDescription"></app-quote-detail>
+                <div class="quotes">
+                    <h3 class="title">{{quote.quoteTitle}}</h3>
+                    <h3>{{quote.quoteDescription}}</h3>
+                    <h3>{{quote.quoteAuthor}}</h3>
+
+                </div>
+                <!-- <h3>{{quote.quoteDescription}}</h3> -->
+                <!-- <h3>{{quote.quoteAuthor}}</h3> -->
+                <app-quote-detail [quotes]="quote" *ngIf="quote.showDescription" ></app-quote-detail>
+                <app-quote-detail [quotes]="quote" *ngIf="quote.showAuthor" class="test"></app-quote-detail>
                 <button (click)="toggle(i)">Toggle</button>
                 <button (click)="deleteQuotes(i)" class="btn-sucess">Delete</button>
                 <button (click)="upVotesQuotes(i)"> UPvotes {{quote.upVotes}}</button>
@@ -13,7 +21,7 @@
             </div>
         </div>
         <div class="col-md -8 test">
-            <app-quotes-form  (userData)="submitData($event)"></app-quotes-form>
+            <app-quotes-form (userData)="submitData($event)"></app-quotes-form>
         </div>
 
     </div>

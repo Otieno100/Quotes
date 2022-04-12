@@ -34,3 +34,22 @@ color: #f8eee3;
     background: #f8eee3;
     /* color: aliceblue; */
 }
+
+.quotes{
+    color: white;
+    border: solid;
+    width: 9cm;
+    height: 4cm;
+    text-align: center;
+    background-color: #1e4558;
+    margin-top: 1cm;
+    margin-bottom: 1cm;
+    border-radius: 20px;
+    font-family: sans-serif;
+    font-size: 10px;
+    
+}
+
+.title{
+    color: red;
+}

@@ -11,9 +11,9 @@ export class QuotesComponent implements OnInit {
 
 
   quotes: Quotes[] = [
-    new Quotes( 'blue Wayne', "black African", "loveQuotes", "whoever loves gets blinded", "j masson benter", new Date(2022, 3, 10,),0,0),
-    new Quotes( 'blue wayne', "black African", "loveQuote", "whoever loves gets blindid", "mason", new Date(2022, 3, 10),0,0),
-    new Quotes( 'blue quote', "black African", "loveQuotes", "whoever loves gets blinded", "j masson benter", new Date(2022, 3, 10),0,0)
+    new Quotes( 'Brian white', "black African", "inspiration", "Life is like a sketch of your own ....", "j masson benter", new Date(2022, 4, 10,),0,0),
+    new Quotes( 'Brian white', "black African", "inspiration", "The greatest there was is just the squreroot of your success", "mason", new Date(2022, 3, 10),0,0),
+    new Quotes( 'Brian white', "black African", "inspiration", "humility is  virtue ", "j masson benter", new Date(2022, 3, 10),0,0)
     
   ];
 
