@@ -50,16 +50,24 @@ Given the following form inputs.
 
 
 ## Technologies Used
-HTML5-Used the box model to provide some responsiveness
-CSS3-Included state of the art styles and a blending color scheme. -Bootstrap4 -For mobile first web design
+
+
+### HTML5-
+Used the box model to provide some responsiveness
+### CSS3-
+Included state of the art styles and a blending color scheme. -Bootstrap4 -For mobile first web design
 FontAwesome Icons
-Google fonts- To blend normal fonts therefore creating seamless user experience
-jQuery-For website interactions
-Angular 8
-Contact Information
-Email -Wambuilucy@gmail.com
-Phone number- +2547021105540
-Contribution
+### Google fonts- 
+To blend normal fonts therefore creating seamless user experience
+### jQuery-
+For website interactions
+### javascript ..
+used to produce functionality of the web
+### typeScript
+provided the actual code 
+### bootsraps
+For page responsivess
+
 
 
 ## Code scaffolding
