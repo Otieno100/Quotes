@@ -27,12 +27,16 @@ export class QuotesComponent implements OnInit {
      this.quotes[index].showDescription= !this.quotes[index].showDescription
    }
 
+   highest!:number;
+
    deleteQuotes(index:number){
      this.quotes.splice(index,1)
    }
    upVotesQuotes(index:number){
     var app = this.quotes [index].upVotes+1;
 this.quotes [index].upVotes=app
+let arr:number[]=this.quotes.map(quotes=>quotes.upVotes);
+this.highest =Math.max(...arr);
    }
 
    downVotesQuotes(index:number){

@@ -53,6 +53,6 @@
       </div>
     </div>
     
-    <button type="submit" class="btn btn-success">Add Quote</button>
+    <button [disabled]="quoteForm.invalid" type="submit" class="btn btn-success">Add Quote</button>
   </form>
 </div>

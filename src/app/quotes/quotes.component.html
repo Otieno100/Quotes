@@ -4,26 +4,55 @@
 
         <div class="col-md -4">
             <div *ngFor="let quote of quotes;let i =index">
-                <div class="quotes">
-                    <h3 class="title">{{quote.quoteTitle}}</h3>
-                    <h3>{{quote.quoteDescription}}</h3>
-                    <h3>{{quote.quoteAuthor}}</h3>
+                <div *ngIf="quote.upVotes == highest && quote.upVotes >0; then high else low">
 
                 </div>
-                <!-- <h3>{{quote.quoteDescription}}</h3> -->
-                <!-- <h3>{{quote.quoteAuthor}}</h3> -->
-                <app-quote-detail [quotes]="quote" *ngIf="quote.showDescription" ></app-quote-detail>
-                <app-quote-detail [quotes]="quote" *ngIf="quote.showAuthor" class="test"></app-quote-detail>
-                <button (click)="toggle(i)">Toggle</button>
-                <button (click)="deleteQuotes(i)" class="btn-sucess">Delete</button>
-                <button (click)="upVotesQuotes(i)"> UPvotes {{quote.upVotes}}</button>
-                <button (click)="downVotesQuotes(i)"> downVotes{{quote.downVotes}}</button>
+
+                <ng-template #high>
+                    <div appStrikethrough  class="quotes">
+                        <h3 appStrikethrough class="title">{{quote.quoteTitle}}</h3>
+                        <h3>{{quote.quoteDescription}}</h3>
+                        <h3>{{quote.quoteAuthor}}</h3>
+
+                    </div>
+                    <!-- <h3>{{quote.quoteDescription}}</h3> -->
+                    <!-- <h3>{{quote.quoteAuthor}}</h3> -->
+                    <app-quote-detail [quotes]="quote" *ngIf="quote.showDescription"></app-quote-detail>
+                    <app-quote-detail [quotes]="quote" *ngIf="quote.showAuthor" class="test"></app-quote-detail>
+                    <button (click)="toggle(i)">Toggle</button>
+                    <button (click)="deleteQuotes(i)" class="btn-sucess">Delete</button>
+                    <button (click)="upVotesQuotes(i)"> UPvotes {{quote.upVotes}}</button>
+                    <button (click)="downVotesQuotes(i)"> downVotes{{quote.downVotes}}</button>
+
+
+                </ng-template>
+
+
+                <ng-template #low>
+                    
+                    <div class="quotes">
+                        <h3 class="title">{{quote.quoteTitle}}</h3>
+                        <h3>{{quote.quoteDescription}}</h3>
+                        <h3>{{quote.quoteAuthor}}</h3>
+
+                    </div>
+                    <!-- <h3>{{quote.quoteDescription}}</h3>  -->
+                    <!-- <h3>{{quote.quoteAuthor}}</h3> -->
+                    <app-quote-detail [quotes]="quote" *ngIf="quote.showDescription"></app-quote-detail>
+                    <app-quote-detail [quotes]="quote" *ngIf="quote.showAuthor" class="test"></app-quote-detail>
+                    <button (click)="toggle(i)">Toggle</button>
+                    <button (click)="deleteQuotes(i)" class="btn-sucess">Delete</button>
+                    <button (click)="upVotesQuotes(i)"> UPvotes {{quote.upVotes}}</button>
+                    <button (click)="downVotesQuotes(i)"> downVotes{{quote.downVotes}}</button>
+
+                </ng-template>
             </div>
         </div>
+        <!-- form -->
         <div class="col-md -8 test">
             <app-quotes-form (userData)="submitData($event)"></app-quotes-form>
         </div>
 
-    </div>
 
-</div>
+
+    </div>
